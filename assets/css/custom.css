@@ -10,7 +10,7 @@
 .navbar-default .navbar-nav > li > a,
 .navbar-default .navbar-nav > .active > a
 {
-  color: inherit;
+  color: #F0563D;
 }
 
 .navbar
@@ -24,4 +24,9 @@
   letter-spacing: inherit;
   font-weight: inherit;
   line-height: inherit;
+}
+
+.navbar-nav a:before{
+  content: '//';
+  margin-right: 5px;
 }
