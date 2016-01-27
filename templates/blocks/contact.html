@@ -1,0 +1,16 @@
+<div class="contact-item">
+  <div class="icon pull-left text-center">
+  {% if this.medium == "phone" %}
+  <span class="fa fa-phone fa-fw"></span>
+  {% elif this.medium == "mail" %}
+  <span class="fa fa-envelope fa-fw"></span>
+  {% elif this.medium == "twitter" %}
+  <span class="fa fa-twitter fa-fw"></span>
+  {% elif this.medium == "facebook" %}
+  <span class="fa fa-facebook fa-fw"></span>
+  {% elif this.medium == "skype" %}
+  <span class="fa fa-skype fa-fw"></span>
+  {% endif %}
+  </div>
+  <div class="title only pull-right">{{ this.text }}</div>
+</div>

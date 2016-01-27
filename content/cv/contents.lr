@@ -1,9 +1,55 @@
-title: Projects
+title: // CV
 ---
-body:
+headline:
 
-This is a list of the projects:
+Hello,  
+====================
+my name is <span>ellisal</span><sup>24yo</sup> and this is my resume/cv
+====================
+---
+about: eine beschreibung ueber mich
+---
+edu:
 
-* Project 1
-* Project 2
-* Project 3
+#### education ####
+year: 1990
+----
+header: Sample Header
+----
+text: Sample Text
+#### education ####
+year: 1995
+----
+header: Header #2
+----
+text: Text #2
+---
+exp:
+
+#### experience ####
+timespan: 2001-2002
+----
+occupation: company#1
+----
+header: Sample Header
+----
+text: Sample Text
+#### experience ####
+timespan: 2005-2006
+----
+occupation: GOggle
+----
+header: A header
+----
+text: Some text
+---
+contact:
+
+#### contact ####
+text: 12345
+----
+medium: phone
+#### contact ####
+text: yannic@n0el.de
+----
+medium: mail
