@@ -22,6 +22,12 @@ year: 1995
 header: Header #2
 ----
 text: Text #2
+#### education ####
+year: 2000
+----
+header: ein neuer header
+----
+text: ein neuer text
 ---
 exp:
 
@@ -41,6 +47,14 @@ occupation: GOggle
 header: A header
 ----
 text: Some text
+#### experience ####
+timespan: 1727126372
+----
+occupation: 1239123791
+----
+header: 1237912378
+----
+text: 123
 ---
 contact:
 
