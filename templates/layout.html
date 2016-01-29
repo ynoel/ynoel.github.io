@@ -6,6 +6,7 @@
 <link href="/static/font-awesome.css" rel="stylesheet">
 <link href="/static/main.css" rel="stylesheet">
 <link href="/css/custom.css" rel="stylesheet">
+
 <title>{% block title %}Welcome{% endblock %} — 0xc0de4ff3</title>
 <body>
 
@@ -25,10 +26,9 @@
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <ul class="nav navbar-nav">
-        {% for href, title in [
+
+        {% for href, title in [        
           ['/', 'Welcome'],
-          ['/blog', 'Blog'],
-          ['/projects', 'Projects'],
           ['/cv', 'CV']
           ] %}
           <li
@@ -51,5 +51,7 @@
   <script src="/static/bootstrap.js"></script>
   <!-- SCRIPTS -->
   <script src="/static/scripts.js"></script>
+
+  <script src="/js/moment.min.js"></script>
 
 </body>
