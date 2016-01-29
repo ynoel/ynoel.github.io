@@ -1,22 +1,21 @@
 title: // CV
 ---
-headline:
-
-Hello,  
-====================
-my name is <span>ellisal</span><sup>24yo</sup> and this is my resume/cv
-====================
+name: Yannic Noel Stolz
+---
+firstname: Yannic
+---
+birthday: 11.12.1989
 ---
 about: eine beschreibung ueber mich
 ---
 edu:
 
 #### education ####
-year: 1990
+year: 2013
 ----
-header: Sample Header
+header: Bachelor of Science
 ----
-text: Sample Text
+text: Computer Science (Informatik), Technische Hochschule Mittelhessen
 #### education ####
 year: 1995
 ----
@@ -53,3 +52,10 @@ medium: phone
 text: yannic@n0el.de
 ----
 medium: mail
+---
+skills:
+
+#### skill ####
+percent: 0.25
+----
+text: Go

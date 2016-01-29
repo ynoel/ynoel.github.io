@@ -12,6 +12,13 @@ var callback = function(){
         height: 14,
     }, 2000);
 	});
+
+
+	var birthday = $('#birthday').html();
+	var birthday_time_from_now = moment(birthday, "DD.MM.YYYY").fromNow('false');
+	var years = birthday_time_from_now.split(" ")[0]
+
+	$('#years_old').html(years + "YO");
 };
 $(document).ready(callback);
 
