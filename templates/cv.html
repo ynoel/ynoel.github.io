@@ -12,13 +12,31 @@
             </div>          
         </div>
       </div>
-
+      <div class="row">
+        <div class="col-xs-12 col-sm-12">
+          <div id="about" class="box">
+            <h2>About</h2>            
+            {{ this.about }}
+          </div>
+        </div>
+      </div>
       <div class="row">
         <div class="col-xs-12 col-sm-7">
           <!-- ABOUT ME -->
-          <div class="box">
-            <h2>About Me</h2>            
-            {{ this.about }}
+          <div id="facts" class="box">
+            <h2>Facts</h2>                        
+            <div class="job clearfix">
+              <div class="col-xs-3">
+                <div class="where">Date of birth</div>                
+                <div class="where">Location</div>
+                <!--<div class="where">Family status</div>-->
+              </div>
+              <div class="col-xs-9">
+                <div class="where">{{ this.birthday}}</div>
+                <div class="where">{{ this.residence}}</div>
+                <!--<div class="where">{{ this.familystatus}}</div>-->
+              </div>
+            </div>
           </div>
           <!-- EDUCATION -->
           <div class="box">
@@ -41,15 +59,53 @@
           <!-- CONTACT -->
           <div class="box clearfix">
             <h2>Contact</h2>
-            {% for item in this.contact.blocks %}              
-              {{ item}}
-            {% endfor %}              
+            <div class="contact-item">
+              <div class="icon pull-left text-center">
+              <span class="fa fa-envelope fa-fw email_link"></span>
+              </div>
+              <div class="title only pull-right">
+                <style>
+                  .email:after{ content:'@n0el.de'; }
+                </style>
+                <span class="email">yannic</span>              
+              </div>
+            </div>         
           </div>
           <!-- SKILLS -->
           <div class="box">
-            <h2>Skills</h2>
+            <h2>Languages</h2>
             <div class="skills">
-              {% for item in this.skills.blocks %}
+              {% for item in this.languages.blocks %}
+                {{ item }}
+              {% endfor %}
+              <div class="skills-legend clearfix">
+                <div class="legend-left legend">Beginner</div>
+                <div class="legend-left legend"><span>Proficient</span></div>
+                <div class="legend-right legend"><span>Expert</span></div>
+                <div class="legend-right legend">Master</div>
+              </div>
+            </div>
+          </div>
+          <!-- SKILLS -->
+          <div class="box">
+            <h2>Technologies</h2>
+            <div class="skills">
+              {% for item in this.technologies.blocks %}
+                {{ item }}
+              {% endfor %}
+              <div class="skills-legend clearfix">
+                <div class="legend-left legend">Beginner</div>
+                <div class="legend-left legend"><span>Proficient</span></div>
+                <div class="legend-right legend"><span>Expert</span></div>
+                <div class="legend-right legend">Master</div>
+              </div>
+            </div>
+          </div>
+          <!-- SKILLS -->
+          <div class="box">
+            <h2>Platforms</h2>
+            <div class="skills">
+              {% for item in this.platforms.blocks %}
                 {{ item }}
               {% endfor %}
               <div class="skills-legend clearfix">
@@ -64,16 +120,18 @@
           <div class="box">
             <h2>Languages</h2>
             <div id="language-skills">
-              <div class="skill">German <div class="icons pull-right"><div style="width: 80%;" class="icons-red"></div></div></div>
               <div class="skill">English <div class="icons pull-right"><div style="width: 60%;" class="icons-red"></div></div></div>
+              <div class="skill">German <div class="icons pull-right"><div style="width: 80%;" class="icons-red"></div></div></div>              
             </div>
           </div>
           <!-- HOBBIES -->
           <div class="box">
             <h2>Hobbies</h2>
-            <div class="hobby">Climbing</div>
+            <div class="hobby">Rock climbing</div>
             <div class="hobby">Guitar</div>        
             <div class="hobby">Programming</div>
+            <div class="hobby">Strategy games</div>        
+            <div class="hobby">Research</div>
           </div>
         </div>
       </div>

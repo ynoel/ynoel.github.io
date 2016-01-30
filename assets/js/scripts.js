@@ -15,10 +15,14 @@ var callback = function(){
 
 
 	var birthday = $('#birthday').html();
-	var birthday_time_from_now = moment(birthday, "DD.MM.YYYY").fromNow('false');
+	var birthday_time_from_now = moment(birthday, "DD/MM/YYYY").fromNow('false');
 	var years = birthday_time_from_now.split(" ")[0]
 
 	$('#years_old').html(years + "YO");
+
+	$('.email, .email_link').click(function(){
+    	window.location.href='mailto:'+$(this).html()+'@n0el.de';
+	});
 };
 $(document).ready(callback);
 
