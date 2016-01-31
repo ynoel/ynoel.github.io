@@ -29,37 +29,37 @@
             <div class="job clearfix">
               <div class="col-xs-3">
                 {% if bag('cv', 'config', 'mode') == 'pdf' %}
-                  <div class="where">
-                  Name
-                  </div>
-                {% endif %}
-                <div class="where">Date of birth</div>                
-                <div class="where">
+                  <div class="where">Name</div>
+                {% endif %}                
+                {% if bag('cv', 'config', 'mode') == 'pdf' %}
+                <div class="where">Birthday</div>         
+                {% else %}                        
+                <div class="where">Born</div>  
+                {% endif %}   
                 {% if bag('cv', 'config', 'mode') == 'web' %}
-                  Location
+                  <div class="where">Location</div>
                 {% else %}
-                  Address
-                {% endif %}
-                </div>
+                  <div class="where">Address</div>
+                {% endif %}                                 
                 <!--<div class="where">Family status</div>-->
               </div>
               <div class="col-xs-9">
                 {% if bag('cv', 'config', 'mode') == 'pdf' %}
-                  <div class="where">
-                  {{ this.name }}
-                  </div>
+                  <div class="where">{{ this.name }}</div>
                 {% endif %}
-                <div class="where">{{ this.birthday}}</div>
-                <div class="where">
+                {% if bag('cv', 'config', 'mode') == 'pdf' %}
+                <div class="where">{{ this.birthday}}</div>  
+                {% else %}                        
+                <div class="where">1989</div>  
+                {% endif %}
                 {% if bag('cv', 'config', 'mode') == 'web' %}
-                  {{ this.residence }}
+                  <div class="where">{{ this.residence }}</div>
                 {% else %}
-                  {{ this.residence_full }}
-                {% endif %}
-                </div>
+                  <div class="where">{{ this.residence_full }}</div>
+                {% endif %}                   
                 <!--<div class="where">{{ this.familystatus}}</div>-->
               </div>
-            </div>
+            </div>         
           </div>
           <!-- EDUCATION -->
           <div class="box">
