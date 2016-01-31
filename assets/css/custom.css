@@ -85,3 +85,7 @@
 .where p {
     margin: inherit;
 }
+
+.profession {
+  white-space: normal;
+}
