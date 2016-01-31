@@ -1,0 +1,1 @@
+lektor build --output-path output

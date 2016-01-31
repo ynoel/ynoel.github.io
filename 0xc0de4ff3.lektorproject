@@ -1,4 +1,7 @@
 [project]
 name = n0el
 url = https://www.n0el.de
-locale = de_DE
+locale = en_US
+
+[servers.vultr]
+target = rsync://ynoel@108.61.211.118/home/ynoel/lektor
