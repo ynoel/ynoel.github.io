@@ -18,11 +18,7 @@ SETTINGS
 /*******************************************
 BODY
 *******************************************/
-
-
 body{
-  margin:0;
-  
   font-family: 'Open Sans', Arial, Tahoma;
   font-weight: 400;
   font-size: 1em;
@@ -65,18 +61,12 @@ PHOTO (AVATAR)
   text-transform: uppercase;
   letter-spacing: -1px;
 }
-
-
-
-
 #text-header h1::first-line{
   font-size: 1.5em;
   letter-spacing: -4px;
   font-weight: 800;
   line-height: 1.5em;
 }
-
-
 #text-header h1 span{
   color: #F0563D;
 }
@@ -160,16 +150,6 @@ EDUCATION
   padding: 10px 10px 0 10px;
   border-bottom: 1px solid #ddd;
 }
-
-.greybox {
-  margin:0;
-  background: #eee;
-  margin-bottom: 10px;
-  position: relative;
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
-}
-
 #education .description:after {
   content: '';
   position: absolute;

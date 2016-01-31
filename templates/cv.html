@@ -65,9 +65,9 @@
               </div>
               <div class="title only pull-right">
                 <style>
-                  .email:after{ content:'@n0el.de'; }
+                  .email:after{ content:'{{ bag('email', 'contact', 'tld') }}'; }
                 </style>
-                <span class="email">yannic</span>              
+                <span class="email">{{ bag('email', 'contact', 'name') }}@</span>              
               </div>
             </div>         
           </div>
@@ -120,8 +120,8 @@
           <div class="box">
             <h2>Languages</h2>
             <div id="language-skills">
-              <div class="skill">English <div class="icons pull-right"><div style="width: 60%;" class="icons-red"></div></div></div>
-              <div class="skill">German <div class="icons pull-right"><div style="width: 80%;" class="icons-red"></div></div></div>              
+              <div class="skill">English <div class="icons pull-right"><div style="width: 80%;" class="icons-red"></div></div></div>
+              <div class="skill">German <div class="icons pull-right"><div style="width: 100%;" class="icons-red"></div></div></div>              
             </div>
           </div>
           <!-- HOBBIES -->
@@ -137,5 +137,6 @@
       </div>
 
       <div id="birthday" style="display:none">{{ this.birthday}}</div>
+      <div id="tld" style="display:none">{{ bag('email', 'contact', 'tld') }}</div>
     
 {% endblock %}
