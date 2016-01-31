@@ -85,7 +85,3 @@
 .where p {
     margin: inherit;
 }
-
-.job > :first-child {
-  padding-left: 0px;
-}
