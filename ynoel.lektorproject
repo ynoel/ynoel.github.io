@@ -1,6 +1,6 @@
 [project]
-name = n0el
-url = http://n0el.de
+name = ynoel
+url = http://ynoel.de
 locale = en_US
 
 [servers.vultr]
