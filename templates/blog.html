@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% from "macros/blog.html" import render_blog_post %}
+{% from "macros/pagination.html" import render_pagination %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block body %}
+	<div class="row">
+		<div class="col-xs-12 text-center">
+			<div id="text-header">
+				{{ this.greeting }}
+			</div>
+		</div>
+	</div>
+  {% for child in this.pagination.items %}
+    {{ render_blog_post(child, from_index=true) }}
+  {% endfor %}
+
+  {{ render_pagination(this.pagination) }}
+{% endblock %}

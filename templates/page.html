@@ -1,184 +1,21 @@
 {% extends "layout.html" %}
 {% block title %}{{ this.title }}{% endblock %}
 {% block body %}
-
-      <div class="row">
-        <div class="col-xs-12 text-center">      
-          {% if bag('cv', 'config', 'mode') == 'web' %}
-            <div id="text-header">
-              {{ this.greeting }}
-            </div>          
-          {% endif %}
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-12 col-sm-12">
-          {% if bag('cv', 'config', 'mode') == 'web' %}
-          <div id="about" class="box">
-            <h2>About</h2>            
-            {{ this.about }}
-          </div>
-          {% endif %}
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-12 col-sm-7">
-          <!-- ABOUT ME -->
-          <div id="facts" class="box">
-            <h2>Facts</h2>                        
-            <div class="job clearfix">
-              <div class="col-xs-3">
-                {% if bag('cv', 'config', 'mode') == 'pdf' %}
-                  <div class="where">Name</div>
-                {% endif %}                
-                {% if bag('cv', 'config', 'mode') == 'pdf' %}
-                <div class="where">Birthday</div>         
-                {% else %}                        
-                <div class="where">Born</div>  
-                {% endif %}   
-                {% if bag('cv', 'config', 'mode') == 'web' %}
-                  <div class="where">Location</div>
-                {% else %}
-                  <div class="where">Address</div>
-                {% endif %}                                 
-                <!--<div class="where">Family status</div>-->
-              </div>
-              <div class="col-xs-9">
-                {% if bag('cv', 'config', 'mode') == 'pdf' %}
-                  <div class="where">{{ this.name }}</div>
-                {% endif %}
-                {% if bag('cv', 'config', 'mode') == 'pdf' %}
-                <div class="where">{{ this.birthday}}</div>  
-                {% else %}                        
-                <div class="where">1989</div>  
-                {% endif %}
-                {% if bag('cv', 'config', 'mode') == 'web' %}
-                  <div class="where">{{ this.residence }}</div>
-                {% else %}
-                  <div class="where">{{ this.residence_full }}</div>
-                {% endif %}                   
-                <!--<div class="where">{{ this.familystatus}}</div>-->
-              </div>
-            </div>         
-          </div>
-          <!-- EDUCATION -->
-          <div class="box">
-            <h2>Education</h2>
-            <ul id="education" class="clearfix">
-              {% for item in this.edu.blocks %}              
-                {{ item}}
-              {% endfor %}              
-            </ul>
-          </div>
-          <!-- EXPERIENCES -->
-          <div class="box">
-            <h2>Experiences</h2>
-            {% for item in this.exp.blocks %}              
-              {{ item}}
-            {% endfor %}  
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-5">
-          <!-- CONTACT -->
-          <div class="box clearfix">
-            <h2>Contact</h2>
-            <div class="contact-item">
-              <div class="icon pull-left text-center">
-              <span class="fa fa-envelope fa-fw email_link"></span>
-              </div>
-              <div class="title only pull-right">
-                <style>
-                  .email:after{ content:'{{ bag('cv', 'contact', 'tld') }}'; }
-                </style>
-                <span class="email">{{ bag('cv', 'contact', 'name') }}@</span>              
-              </div>
-            </div>  
-            {% if bag('cv', 'config', 'mode') == 'pdf' %}            
-            <div class="contact-item">
-              <div class="icon pull-left text-center">
-              <span class="fa fa-phone fa-fw"></span>
-              </div>
-              <div class="title only pull-right">                
-                {{ bag('cv', 'contact', 'phone') }}           
-              </div>
-            </div>    
-            {% endif %}       
-          </div>
-          <!-- SKILLS -->
-          <div class="box">
-            <h2>Programming languages</h2>
-            <div class="skills">
-              {% for item in this.languages.blocks %}
-                {{ item }}
-              {% endfor %}
-              {% if bag('cv', 'config', 'mode') == 'web' %} 
-              <div class="skills-legend clearfix">
-                <div class="legend-left legend">Beginner</div>
-                <div class="legend-left legend"><span>Proficient</span></div>
-                <div class="legend-right legend"><span>Expert</span></div>
-                <div class="legend-right legend">Master</div>
-              </div>
-              {% endif %}
-            </div>
-          </div>
-          <!-- SKILLS -->
-          <div class="box">
-            <h2>Technologies</h2>
-            <div class="skills">
-              {% for item in this.technologies.blocks %}
-                {{ item }}
-              {% endfor %}
-              {% if bag('cv', 'config', 'mode') == 'web' %} 
-              <div class="skills-legend clearfix">
-                <div class="legend-left legend">Beginner</div>
-                <div class="legend-left legend"><span>Proficient</span></div>
-                <div class="legend-right legend"><span>Expert</span></div>
-                <div class="legend-right legend">Master</div>
-              </div>
-              {% endif %}
-            </div>
-          </div>
-          <!-- SKILLS -->
-          <div class="box">
-            <h2>Platforms</h2>
-            <div class="skills">
-              {% for item in this.platforms.blocks %}
-                {{ item }}
-              {% endfor %}
-              {% if bag('cv', 'config', 'mode') == 'web' %} 
-              <div class="skills-legend clearfix">
-                <div class="legend-left legend">Beginner</div>
-                <div class="legend-left legend"><span>Proficient</span></div>
-                <div class="legend-right legend"><span>Expert</span></div>
-                <div class="legend-right legend">Master</div>
-              </div>
-              {% endif %}
-            </div>
-          </div>
-          <!-- LANGUAGES -->
-          <div class="box">
-            <h2>Languages</h2>
-            <div id="language-skills">
-              <div class="skill">English <div class="icons pull-right"><div style="width: 80%;" class="icons-red"></div></div></div>
-              <div class="skill">German <div class="icons pull-right"><div style="width: 100%;" class="icons-red"></div></div></div>              
-            </div>
-          </div>
-          {% if bag('cv', 'config', 'mode') == 'pdf' %} 
-          <div style="height:2px"></div>
-          {%endif%}
-          <!-- HOBBIES -->
-          <div class="box">
-            <h2>Hobbies</h2>
-            <div class="hobby">Rock climbing</div>
-            <div class="hobby">Guitar</div>        
-            <div class="hobby">Programming</div>
-            <div class="hobby">Strategy games</div>        
-            <div class="hobby">Research</div>
-          </div>
-        </div>
-      </div>
-
-      <div id="birthday" style="display:none">{{ this.birthday}}</div>
-      <div id="tld" style="display:none">{{ bag('cv', 'contact', 'tld') }}</div>
-    
+	<div class="row">
+		<div class="col-xs-12 text-center">
+			<div id="text-header">
+				{{ this.greeting }}
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12 col-sm-12">
+			
+			<div id="about" class="box">
+				<h2>{{ this.title }}</h2>            
+				{{ this.body }}
+			</div>
+			
+		</div>
+	</div>
 {% endblock %}

@@ -1,0 +1,39 @@
+{% macro render_pagination(pagination) %}
+<div class="row">
+  <div class="col-xs-12 text-center">
+    <div class="pagination pagination-container">
+      {% if pagination.has_prev %}
+        <a href="{{ pagination.prev|url }}">&laquo; Previous</a>
+      {% else %}
+        <span class="disabled">&laquo; Previous</span>
+      {% endif %}
+      <div class=pagination>
+        {%- for page in pagination.iter_pages() %}
+        {% if page %}
+          {% if page != pagination.page %}
+            
+            {% if page == 1 %}
+              <a href="/blog">{{ page }}</a>
+            {% endif %}
+            {% if page > 1 %}
+              <a href="/blog/page/{{page}}/">{{ page }}</a>
+            {% endif %}
+            
+          {% else %}
+            <strong>{{ page }}</strong>
+          {% endif %}
+        {% else %}
+          <span class=ellipsis>...</span>
+        {% endif %}
+        {%- endfor %}
+      </div>
+      {% if pagination.has_next %}
+        <a href="{{ pagination.next|url }}">Next &raquo;</a>
+      {% else %}
+        <span class="disabled">Next &raquo;</span>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% endmacro %}

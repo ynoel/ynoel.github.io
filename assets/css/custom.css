@@ -1,7 +1,7 @@
-.navbar div{
+.navbar div, .pagination-container {
   margin: 0;
   padding: 0;
-  font-size: 1.8em;
+  font-size: 1.4em;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: -1px;
@@ -10,15 +10,38 @@
 .navbar-default .navbar-nav > li > a,
 .navbar-default .navbar-nav > .active > a,
 #about a,
-.pseudolink-email
+.pseudolink-email,
+.pagination-container a
 {
   color: #F0563D;
 }
 
-.navbar
+.navbar, .pagination-container
 {
   border-radius: 0;
   background: #eee;
+}
+
+.pagination-container
+{
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {
+    margin-right: 0px;
+    margin-left: 0px;
+    overflow-x: hidden;
+}
+
+.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand
+{
+  margin-left: 0;
+}
+
+.navbar-default .navbar-collapse
+{
+  border: none;
 }
 
 #text-header h1::first-line{
@@ -64,9 +87,7 @@
 }
 
 #text-header:after{
-  
   height: 2px;
-  
 }
 
 #about:after{
@@ -84,6 +105,11 @@
 }
 .where p {
     margin: inherit;
+}
+
+body
+{
+  overflow-y: scroll; 
 }
 
 @media print {

@@ -4,4 +4,4 @@ url = http://ynoel.de
 locale = en_US
 
 [servers.vultr]
-target = rsync://ynoel@108.61.211.118/home/ynoel/lektor
+target = rsync://ynoel@ynoel.de/home/ynoel/lektor
