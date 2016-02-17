@@ -1,7 +1,0 @@
-[project]
-name = ynoel
-url = http://ynoel.de
-locale = en_US
-
-[servers.vultr]
-target = rsync://ynoel@ynoel.de/home/ynoel/lektor

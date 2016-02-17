@@ -1,0 +1,291 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="/css/bootstrap.css" rel="stylesheet" media="screen,print">
+<link href="/css/font-awesome.css" rel="stylesheet">
+<link href="/css/main.css" rel="stylesheet">
+<link href="/css/custom.css" rel="stylesheet">
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<script src="js/respond.min.js"></script>
+<![endif]-->
+<title>Blog - ynoel.de </title>
+<body>
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div id="photo-header" class="text-center">
+          <!-- PHOTO (AVATAR) -->
+          <div id="photo">
+            <img src="/img/avatar2.jpg" alt="avatar">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 text-center hidden-print" style="margin-top: 20px;">
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Nav</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                
+                  <li  class="active">
+                    <a href="./">Blog
+                    <span class="sr-only">(current)</span>
+                    </a>
+                  </li>
+                
+                  <li >
+                    <a href="./cv/">CV
+                    
+                    </a>
+                  </li>
+                
+              </ul>
+              </div><!-- /.navbar-collapse -->
+              </div><!-- /.container-fluid -->
+            </nav>
+          </div>
+        </div>
+        
+	<div class="row">
+		<div class="col-xs-12 text-center">
+			<div id="text-header">
+				<h1><div class="greeting_first_line">Hello,</div></h1>
+<h1>my name is <span>Yannic Noel</span><sup id="years_old">26YO</sup> and this is my blog</h1>
+
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 hidden-print">
+			<div id="about" class="box">
+				<p style="margin-top:12px"><strong>I am currently looking for employment as a C++ developer. Please take a look at my <a href="/cv">CV</a> if you have an open position.</strong></p>
+			</div>
+		</div>
+	</div>
+	
+		
+			
+  <link rel="stylesheet" href="./static/pygments.css">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12">
+      
+      <div id="about" class="box">
+        <div>
+        
+          <h2 ><a href="./02_tour-of-c++/">A Tour of C++</a></h2>
+         
+        <p  class="meta">
+          written by
+          
+            yannic
+          
+          on 2016-02-17
+        </p>
+        </div>
+        
+        
+        <h4>Acknowledgement</h4>
+<p>This blog post is a review of the book <a href="http://www.stroustrup.com/Tour.html">"A Tour of C++"</a> (<em>Bjarne Stroustrup, Addison-Wesley. ISBN 978-0321958310. September 2013.</em>).</p>
+<h4>Motivation</h4>
+<p>I recently finished reading <strong>"A Tour of C++"</strong> by Bjarne Stroustrup. It is a 180 page book describing literally all of modern C++ in a clear and concise way.</p>
+<p>In my opinion, the book is a great way to get (re-)familiarized with the C++ programming language in general and new language additions in particular.</p>
+<p>It is structured in 14 chapters covering topics such as core language features (i.e. classes and templates) as well as standard library features (i.e. stream, containers, algorithms).</p>
+<p>Each point is illustrated with descriptions, explanations and code samples. The ending of each chapter is marked by general advice about the content of the chapter.</p>
+<h4>Key takeaways</h4>
+<ul>
+<li>Use braced initializton for declarations with a named type, assignment for initializing declarations with auto</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">x</span> <span class="p">{</span><span class="mi">42</span><span class="p">};</span>
+<span class="k">auto</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">4711</span><span class="p">;</span>
+</pre></div>
+<ul>
+<li>Return containers by value (relying on move semantics)</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="n">Vector</span> <span class="nf">f</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">Vector</span> <span class="n">x</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+    <span class="n">Vector</span> <span class="n">y</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+    <span class="n">Vector</span> <span class="n">z</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+    <span class="n">z</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span> <span class="c1">// we get a copy</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">move</span><span class="p">(</span><span class="n">x</span><span class="p">);</span> <span class="c1">// we get a move</span>
+    <span class="k">return</span> <span class="n">z</span><span class="p">;</span> <span class="c1">// we get a move</span>
+<span class="p">};</span>
+</pre></div>
+<ul>
+<li>Use variadic templates to define a function that takes a variable number of arguments of a variety of types</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">f</span><span class="p">()</span> <span class="p">{</span> <span class="p">}</span> <span class="c1">// do nothing</span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="kt">void</span> <span class="n">g</span><span class="p">(</span><span class="n">T</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span> <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">x</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; &quot;</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="k">typename</span> <span class="p">...</span> <span class="n">Tail</span><span class="o">&gt;</span>
+<span class="kt">void</span> <span class="n">f</span><span class="p">(</span><span class="n">T</span> <span class="n">head</span><span class="p">,</span> <span class="n">Tail</span><span class="p">...</span> <span class="n">tail</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">g</span><span class="p">(</span><span class="n">head</span><span class="p">);</span> <span class="c1">// do something to head</span>
+    <span class="n">f</span><span class="p">(</span><span class="n">tail</span><span class="p">...);</span> <span class="c1">// try again with tail</span>
+<span class="p">}</span>
+
+<span class="n">f</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mf">2.2</span><span class="p">,</span><span class="s">&quot;hello&quot;</span><span class="p">);</span> <span class="c1">// prints 1 2.2 hello</span>
+</pre></div>
+<ul>
+<li>For simple traversals of a container, use a range-for loop or a begin/end pair of iterators</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">print_book</span><span class="p">(</span><span class="k">const</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">Entry</span><span class="o">&gt;&amp;</span> <span class="n">book</span><span class="p">,</span> <span class="k">const</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">nums</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span> <span class="nl">x</span> <span class="p">:</span> <span class="n">book</span><span class="p">)</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">x</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="nl">n</span> <span class="p">:</span> <span class="n">nums</span><span class="p">)</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">n</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+      </div>
+      
+    </div>
+  </div>
+
+		
+	
+		
+			
+  <link rel="stylesheet" href="./static/pygments.css">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12">
+      
+      <div id="about" class="box">
+        <div>
+        
+          <h2 ><a href="./01_type-deduction/">C++ Type Deduction</a></h2>
+         
+        <p  class="meta">
+          written by
+          
+            yannic
+          
+          on 2016-02-10
+        </p>
+        </div>
+        
+        
+        <h4>Acknowledgement</h4>
+<p>This blog post is a summary of the talk <strong>"Type Deduction and Why You Care"</strong> (<em>Scott Meyers, CppCon 2014</em>).</p>
+<p>You can find the talk <a href="https://www.youtube.com/watch?v=wQxj20X-tIU">here</a> and the slides <a href="http://www.aristeia.com/TalkNotes/C++TypeDeductionandWhyYouCareCppCon2014.pdf">here</a>. You can find more of Scott's talks <a href="http://www.aristeia.com/presentations.html">here</a>.</p>
+<p>Please refer to the actual talk for in depth information and code samples.</p>
+<h4>Scope of C++ Type Deduction</h4>
+<ul>
+<li>C++98: Templates</li>
+<li>C++11: auto variables, universal references, lambda captures and returns, decltype</li>
+<li>C++14: Function return types, lambda init captures.</li>
+</ul>
+<h4>Templates</h4>
+<p>Template type deduction can be generalised by three cases:</p>
+<ul>
+<li>ParamType is a reference or pointer, but not a universal reference<ul>
+<li>T will not be deduced to a reference</li>
+</ul>
+</li>
+<li>ParamType is a universal reference<ul>
+<li>T will be deduced to a reference if expression is an lvalue (e.g. if you can take its address)</li>
+</ul>
+</li>
+<li>ParamType is neither reference nor pointer<ul>
+<li>(Top level) reference-/const-qualifiers will be dropped when deducing T</li>
+</ul>
+</li>
+</ul>
+<h4>Auto</h4>
+<p>The rules of template type deduction also apply to auto, with one caveat.</p>
+<p>auto will be deduced to a std::initializer_list when initialized with or assigned a braced initializer list:</p>
+<p>Careful: This behaviour will change with the adoption of proposal <a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3922.html">N3922</a> to C++17 (already implemented in MSVC15 CTP).</p>
+<h4>Lambda captures</h4>
+<p>Lambda capture type deduction uses three different mechanisms:</p>
+<ul>
+<li>By reference captures use template type deduction (for reference params).</li>
+<li>Lambda init captures use auto type deduction.</li>
+<li>By value captures use template type deduction <em>with</em> const/volative qualifier retention</li>
+</ul>
+<h4>decltype</h4>
+<p>The decltype keyword deduces the declared type of a name or an lvalue expression with const/volatile/reference retention.</p>
+<p>decltype(expr) typically deduces a reference type. The decltype(name) rule beats the decltype(lvalue expression) rule.</p>
+<h4>Function return types</h4>
+<p>In C++11, function return type deduction applies to single statement lambdas only.</p>
+<p>In C++14, the support for function return type deduction extends to all lambdas and all functions.</p>
+<p>The following return type specifiers are legal:</p>
+<ul>
+<li>auto<ul>
+<li>Uses template rules</li>
+</ul>
+</li>
+<li>decltype(auto)<ul>
+<li>Uses decltype rules</li>
+</ul>
+</li>
+</ul>
+<p>Either can be correct, it depends on the use case. Rule of thumb:</p>
+<ul>
+<li>Use auto if a reference type would never be correct.</li>
+<li>Use decltype(auto) only if a reference type could be correct.</li>
+</ul>
+
+      </div>
+      
+    </div>
+  </div>
+
+		
+	
+		
+	
+	
+<div class="row">
+  <div class="col-xs-12 text-center">
+    <div class="pagination pagination-container">
+      
+        <span class="disabled">&laquo; Previous</span>
+      
+      <div class=pagination>
+        
+          
+            <strong>1</strong>
+          
+        
+      </div>
+      
+        <span class="disabled">Next &raquo;</span>
+      
+    </div>
+  </div>
+</div>
+
+
+
+      </div>
+      
+      <!-- JQUERY -->
+      <script src="/js/jquery.min.js"></script>
+      <!-- BOOTSTRAP -->
+      <script src="/js/bootstrap.min.js"></script>
+      
+      <!-- SCRIPTS -->
+      <script src="/js/scripts.js"></script>
+      <script src="/js/moment.min.js"></script>
+
+      <div id="birthday" style="display:none"> 11/12/1989 </div>
+    </body>
