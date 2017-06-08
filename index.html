@@ -2,15 +2,15 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="/css/bootstrap.css" rel="stylesheet" media="screen,print">
-<link href="/css/font-awesome.css" rel="stylesheet">
-<link href="/css/main.css" rel="stylesheet">
-<link href="/css/custom.css" rel="stylesheet">
+<link href="./css/bootstrap.css" rel="stylesheet" media="screen,print">
+<link href="./css/font-awesome.css" rel="stylesheet">
+<link href="./css/main.css" rel="stylesheet">
+<link href="./css/custom.css" rel="stylesheet">
 <!--[if lt IE 9]>
 <script src="js/html5shiv.js"></script>
 <script src="js/respond.min.js"></script>
 <![endif]-->
-<title>Blog - ynoel.de </title>
+<title>CV - ynoel.de </title>
 <body>
   
   <div class="container">
@@ -19,7 +19,7 @@
         <div id="photo-header" class="text-center">
           <!-- PHOTO (AVATAR) -->
           <div id="photo">
-            <img src="/img/avatar2.jpg" alt="avatar">
+            <img src="./img/avatar4.jpg" alt="avatar">
           </div>
         </div>
       </div>
@@ -42,12 +42,6 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav">
                 
-                  <li  class="active">
-                    <a href="./">Blog
-                    <span class="sr-only">(current)</span>
-                    </a>
-                  </li>
-                
                   <li >
                     <a href="./cv/">CV
                     
@@ -61,231 +55,565 @@
           </div>
         </div>
         
-	<div class="row">
-		<div class="col-xs-12 text-center">
-			<div id="text-header">
-				<h1><div class="greeting_first_line">Hello,</div></h1>
-<h1>my name is <span>Yannic Noel</span><sup id="years_old">26YO</sup> and this is my blog</h1>
-
-			</div>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-xs-12 col-sm-12 hidden-print">
-			<div id="about" class="box">
-				<p style="margin-top:12px"><strong>I am currently looking for employment as a C++ developer. Please take a look at my <a href="/cv">CV</a> if you have an open position.</strong></p>
-			</div>
-		</div>
-	</div>
-	
-		
-			
-  <link rel="stylesheet" href="./static/pygments.css">
   <div class="row">
-    <div class="col-xs-12 col-sm-12">
+    <div class="col-xs-12 text-center">
       
-      <div id="about" class="box">
-        <div>
-        
-          <h2 ><a href="./02_tour-of-c++/">A Tour of C++</a></h2>
-         
-        <p  class="meta">
-          written by
-          
-            yannic
-          
-          on 2016-02-17
-        </p>
+        <div id="text-header">
+          <h1><div class="greeting_first_line">Hello,</div></h1>
+<h1>my name is <span>Yannic Noel</span><sup id="years_old">26YO</sup> and this is my cv</h1>
+
         </div>
-        
-        
-        <h4>Acknowledgement</h4>
-<p>This blog post is a review of the book <a href="http://www.stroustrup.com/Tour.html">"A Tour of C++"</a> (<em>Bjarne Stroustrup, Addison-Wesley. ISBN 978-0321958310. September 2013.</em>).</p>
-<h4>Motivation</h4>
-<p>I recently finished reading <strong>"A Tour of C++"</strong> by Bjarne Stroustrup. It is a 180 page book describing literally all of modern C++ in a clear and concise way.</p>
-<p>In my opinion, the book is a great way to get (re-)familiarized with the C++ programming language in general and new language additions in particular.</p>
-<p>It is structured in 14 chapters covering topics such as core language features (i.e. classes and templates) as well as standard library features (i.e. stream, containers, algorithms).</p>
-<p>Each point is illustrated with descriptions, explanations and code samples. The ending of each chapter is marked by general advice about the content of the chapter.</p>
-<h4>Key takeaways</h4>
-<ul>
-<li>Use braced initializton for declarations with a named type, assignment for initializing declarations with auto</li>
-</ul>
-<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">x</span> <span class="p">{</span><span class="mi">42</span><span class="p">};</span>
-<span class="k">auto</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">4711</span><span class="p">;</span>
-</pre></div>
-<ul>
-<li>Return containers by value (relying on move semantics)</li>
-</ul>
-<div class="highlight"><pre><span></span><span class="n">Vector</span> <span class="nf">f</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="n">Vector</span> <span class="n">x</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
-    <span class="n">Vector</span> <span class="n">y</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
-    <span class="n">Vector</span> <span class="n">z</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
-    <span class="n">z</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span> <span class="c1">// we get a copy</span>
-    <span class="n">y</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">move</span><span class="p">(</span><span class="n">x</span><span class="p">);</span> <span class="c1">// we get a move</span>
-    <span class="k">return</span> <span class="n">z</span><span class="p">;</span> <span class="c1">// we get a move</span>
-<span class="p">};</span>
-</pre></div>
-<ul>
-<li>Use variadic templates to define a function that takes a variable number of arguments of a variety of types</li>
-</ul>
-<div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">f</span><span class="p">()</span> <span class="p">{</span> <span class="p">}</span> <span class="c1">// do nothing</span>
-
-<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
-<span class="kt">void</span> <span class="n">g</span><span class="p">(</span><span class="n">T</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span> <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">x</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; &quot;</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="k">typename</span> <span class="p">...</span> <span class="n">Tail</span><span class="o">&gt;</span>
-<span class="kt">void</span> <span class="n">f</span><span class="p">(</span><span class="n">T</span> <span class="n">head</span><span class="p">,</span> <span class="n">Tail</span><span class="p">...</span> <span class="n">tail</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="n">g</span><span class="p">(</span><span class="n">head</span><span class="p">);</span> <span class="c1">// do something to head</span>
-    <span class="n">f</span><span class="p">(</span><span class="n">tail</span><span class="p">...);</span> <span class="c1">// try again with tail</span>
-<span class="p">}</span>
-
-<span class="n">f</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mf">2.2</span><span class="p">,</span><span class="s">&quot;hello&quot;</span><span class="p">);</span> <span class="c1">// prints 1 2.2 hello</span>
-</pre></div>
-<ul>
-<li>For simple traversals of a container, use a range-for loop or a begin/end pair of iterators</li>
-</ul>
-<div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">print_book</span><span class="p">(</span><span class="k">const</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">Entry</span><span class="o">&gt;&amp;</span> <span class="n">book</span><span class="p">,</span> <span class="k">const</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">nums</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="k">for</span> <span class="p">(</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span> <span class="nl">x</span> <span class="p">:</span> <span class="n">book</span><span class="p">)</span>
-        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">x</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;\n&#39;</span><span class="p">;</span>
-
-    <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="nl">n</span> <span class="p">:</span> <span class="n">nums</span><span class="p">)</span>
-        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">n</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;\n&#39;</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-
-      </div>
       
     </div>
   </div>
-
-		
-	
-		
-			
-  <link rel="stylesheet" href="./static/pygments.css">
   <div class="row">
-    <div class="col-xs-12 col-sm-12">
-      
+    <div class="col-xs-12 col-sm-12 hidden-print">
       <div id="about" class="box">
-        <div>
-        
-          <h2 ><a href="./01_type-deduction/">C++ Type Deduction</a></h2>
-         
-        <p  class="meta">
-          written by
-          
-            yannic
-          
-          on 2016-02-10
-        </p>
-        </div>
-        
-        
-        <h4>Acknowledgement</h4>
-<p>This blog post is a summary of the talk <strong>"Type Deduction and Why You Care"</strong> (<em>Scott Meyers, CppCon 2014</em>).</p>
-<p>You can find the talk <a href="https://www.youtube.com/watch?v=wQxj20X-tIU">here</a> and the slides <a href="http://www.aristeia.com/TalkNotes/C++TypeDeductionandWhyYouCareCppCon2014.pdf">here</a>. You can find more of Scott's talks <a href="http://www.aristeia.com/presentations.html">here</a>.</p>
-<p>Please refer to the actual talk for in depth information and code samples.</p>
-<h4>Scope of C++ Type Deduction</h4>
-<ul>
-<li>C++98: Templates</li>
-<li>C++11: auto variables, universal references, lambda captures and returns, decltype</li>
-<li>C++14: Function return types, lambda init captures.</li>
-</ul>
-<h4>Templates</h4>
-<p>Template type deduction can be generalised by three cases:</p>
-<ul>
-<li>ParamType is a reference or pointer, but not a universal reference<ul>
-<li>T will not be deduced to a reference</li>
-</ul>
-</li>
-<li>ParamType is a universal reference<ul>
-<li>T will be deduced to a reference if expression is an lvalue (e.g. if you can take its address)</li>
-</ul>
-</li>
-<li>ParamType is neither reference nor pointer<ul>
-<li>(Top level) reference-/const-qualifiers will be dropped when deducing T</li>
-</ul>
-</li>
-</ul>
-<h4>Auto</h4>
-<p>The rules of template type deduction also apply to auto, with one caveat.</p>
-<p>auto will be deduced to a std::initializer_list when initialized with or assigned a braced initializer list:</p>
-<p>Careful: This behaviour will change with the adoption of proposal <a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3922.html">N3922</a> to C++17 (already implemented in MSVC15 CTP).</p>
-<h4>Lambda captures</h4>
-<p>Lambda capture type deduction uses three different mechanisms:</p>
-<ul>
-<li>By reference captures use template type deduction (for reference params).</li>
-<li>Lambda init captures use auto type deduction.</li>
-<li>By value captures use template type deduction <em>with</em> const/volative qualifier retention</li>
-</ul>
-<h4>decltype</h4>
-<p>The decltype keyword deduces the declared type of a name or an lvalue expression with const/volatile/reference retention.</p>
-<p>decltype(expr) typically deduces a reference type. The decltype(name) rule beats the decltype(lvalue expression) rule.</p>
-<h4>Function return types</h4>
-<p>In C++11, function return type deduction applies to single statement lambdas only.</p>
-<p>In C++14, the support for function return type deduction extends to all lambdas and all functions.</p>
-<p>The following return type specifiers are legal:</p>
-<ul>
-<li>auto<ul>
-<li>Uses template rules</li>
-</ul>
-</li>
-<li>decltype(auto)<ul>
-<li>Uses decltype rules</li>
-</ul>
-</li>
-</ul>
-<p>Either can be correct, it depends on the use case. Rule of thumb:</p>
-<ul>
-<li>Use auto if a reference type would never be correct.</li>
-<li>Use decltype(auto) only if a reference type could be correct.</li>
-</ul>
+        <h2>About</h2>
+        <p>I am a software developer with a passion for writing elegant and efficient <a href="https://isocpp.org/">C++</a> code. My favourite piece of literature is <a href="http://www.aristeia.com/books.html">Effective C++</a>.</p>
+<p>I do my best to stay up to date with recent advancements by reading <a href="https://isocpp.org/blog">blogs</a>, watching <a href="https://www.youtube.com/user/CppCon">talks</a> and listening to <a href="http://cppcast.com">podcasts</a>.</p>
+<p>Besides learning more about C++, improving my familiarity with <a href="https://www.python.org/">Python</a> is of particular interest to me.</p>
+<p>When I'm not coding, its not uncommon to see me in a <a href="http://www.climbing-factory.de">climbing</a> or <a href="http://cafekraft.de/">bouldering</a> gym.</p>
 
       </div>
-      
     </div>
   </div>
-
-		
-	
-		
-	
-	
-<div class="row">
-  <div class="col-xs-12 text-center">
-    <div class="pagination pagination-container">
-      
-        <span class="disabled">&laquo; Previous</span>
-      
-      <div class=pagination>
-        
-          
-            <strong>1</strong>
-          
-        
+  <div class="row">
+    <!-- ABOUT ME -->
+    <div id="facts" class="box hidden-print">
+      <div class="col-xs-12 col-sm-7">
+        <h2>Facts</h2>
+        <div class="job clearfix">
+          <div class="col-xs-3">
+            <div class="where">
+              Name
+            </div>
+            
+              <div class="where">Born</div>
+            
+            
+              <div class="where">Location</div>
+            
+            <!--<div class="where">Family status</div>-->
+          </div>
+          <div class="col-xs-9">
+            <div class="where">
+              
+                Yannic Noel S.
+              
+            </div>
+            
+              <div class="where">1989</div>
+            
+            
+              <div class="where">Nuremberg</div>
+            
+            <!--<div class="where">single</div>-->
+          </div>
+        </div>
       </div>
-      
-        <span class="disabled">Next &raquo;</span>
-      
+      <div class="col-xs-12 col-sm-5">
+        <!-- CONTACT -->
+        <div class="box clearfix hidden-print">
+          <h2>Contact</h2>
+          <div class="contact-item">
+            <div class="icon pull-left text-center">
+              <span class="fa fa-envelope fa-fw email_link"></span>
+            </div>
+            <div class="title only pull-right">
+              <style scoped>
+              .email:after{ content:'ynoel.de'; }
+              </style>
+              <span class="email">mail@</span>
+            </div>
+          </div>
+          
+        </div>
+      </div>
     </div>
+    <div class="print visible-print-block">
+      <div class="box col-xs-6">
+        <h2>Facts</h2>
+        <div class="job clearfix">
+          <div class="col-xs-3">
+            <div class="where">
+              Name
+            </div>
+            
+              <div class="where">Born</div>
+            
+            
+              <div class="where">Location</div>
+            
+            <!--<div class="where">Family status</div>-->
+          </div>
+          <div class="col-xs-9">
+            <div class="where">
+              
+                Yannic Noel S.
+              
+            </div>
+            
+              <div class="where">1989</div>
+            
+            
+              <div class="where">Nuremberg</div>
+            
+            <!--<div class="where">single</div>-->
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <div class="box clearfix visible-print-block">
+          <h2>Contact</h2>
+          <div class="contact-item">
+            <div class="icon pull-left text-center">
+              <span class="fa fa-envelope fa-fw email_link"></span>
+            </div>
+            <div class="title only pull-right">
+              <style scoped>
+              .email:after{ content:'ynoel.de'; }
+              </style>
+              <span class="email">mail@</span>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    
+    
+    <div class="col-xs-12 col-sm-7">
+      
+      <!-- EDUCATION -->
+      <div class="box">
+        <h2>Education</h2>
+        <ul id="education" class="clearfix">
+          
+            <li>
+	<div class="year pull-left">2013</div>
+	<div class="description pull-right">
+	  <h3>Bachelor of Science</h3>
+	  <p><p>Major in computer science, finished as best student in class</p>
+<p><em>Technische Hochschule Mittelhessen</em></p>
+</p>
+	</div>
+</li>
+          
+            <li>
+	<div class="year pull-left">2008</div>
+	<div class="description pull-right">
+	  <h3>Training</h3>
+	  <p><p>Certified technical assistant for information technology with major in computer engineering</p>
+<p><em>BBS Betzdorf - Kirchen</em></p>
+</p>
+	</div>
+</li>
+          
+            <li>
+	<div class="year pull-left">2006</div>
+	<div class="description pull-right">
+	  <h3>Secondary school</h3>
+	  <p><p>Major in science and technology</p>
+<p><em>Realschule Neunkirchen</em></p>
+</p>
+	</div>
+</li>
+          
+        </ul>
+      </div>
+      <div class="visible-print-block" style="height:10px"></div>      
+      <!-- EXPERIENCES -->
+      <div class="box">
+        <h2>Experiences</h2>
+        
+          <div class="job clearfix">
+  <div class="col-xs-3">
+    <div class="where">e.Solutions GmbH</div>
+    <div class="year">2017-2016</div>
+  </div>
+  <div class="col-xs-9">
+    <div class="profession">C++ developer</div>
+    <div class="description"><p>Development and maintenance of software for automotive instrument clusters</p>
+<p><code>C++, Python, Java, real-time UNIX, CAN-BUS</code></p>
+<p><em>Full-time employee</em></p>
+</div>
   </div>
 </div>
+        
+          <div class="job clearfix">
+  <div class="col-xs-3">
+    <div class="where">Paessler AG</div>
+    <div class="year">2016-2014</div>
+  </div>
+  <div class="col-xs-9">
+    <div class="profession">Delphi / C++ / C# developer</div>
+    <div class="description"><p>Extension and maintenance of Delphi based network monitoring software</p>
+<p>Implementation of a C++ based COM interface for hosting the .NET CLR</p>
+<p>Troubleshooting and improvement of custom OpenSSL integration</p>
+<p><code>Delphi, C++, C#, .NET, CLR, OpenSSL, Networking (Layer 3-7)</code></p>
+<p><em>Full-time employee</em></p>
+</div>
+  </div>
+</div>
+        
+          <div class="job clearfix">
+  <div class="col-xs-3">
+    <div class="where">Media-Saturn</div>
+    <div class="year">2014-2013</div>
+  </div>
+  <div class="col-xs-9">
+    <div class="profession">JEE developer</div>
+    <div class="description"><p>Extension, supervision and maintenance of JEE enterprise solutions</p>
+<p><code>Java, JEE, JBoss, Oracle, Flex</code></p>
+<p><em>Full-time employee</em></p>
+</div>
+  </div>
+</div>
+        
+          <div class="job clearfix">
+  <div class="col-xs-3">
+    <div class="where">Bachelor thesis</div>
+    <div class="year">2013</div>
+  </div>
+  <div class="col-xs-9">
+    <div class="profession">Applied cryptography</div>
+    <div class="description"><p>Design and implementation of a hybrid cryptosystem for cloud computing environments</p>
+<p><code>C++, Qt, Crypto++, RSA, AES, transparent cryptography</code></p>
+<p><em>Final thesis of bachelor's degree</em></p>
+</div>
+  </div>
+</div>
+        
+          <div class="job clearfix">
+  <div class="col-xs-3">
+    <div class="where">Prisma GmbH</div>
+    <div class="year">2013-2010</div>
+  </div>
+  <div class="col-xs-9">
+    <div class="profession">C++ developer / JEE developer</div>
+    <div class="description"><p>Extension and maintenance of Qt based desktop applications</p>
+<p>Implementation of JEE based web applications</p>
+<p><code>C++, Java, JEE, Qt, Oracle, HTML, CSS, Javascript</code></p>
+<p><em>Working student</em></p>
+</div>
+  </div>
+</div>
+        
+          <div class="job clearfix">
+  <div class="col-xs-3">
+    <div class="where">Self employed</div>
+    <div class="year">2010</div>
+  </div>
+  <div class="col-xs-9">
+    <div class="profession">PHP developer</div>
+    <div class="description"><p>Implementation of PHP based web applications</p>
+<p><code>PHP, SQL, HTML, CSS, Javascript, MySQL, Apache</code></p>
+<p><em>Contractor</em></p>
+</div>
+  </div>
+</div>
+        
+          <div class="job clearfix">
+  <div class="col-xs-3">
+    <div class="where">Beewen GmbH</div>
+    <div class="year">2009</div>
+  </div>
+  <div class="col-xs-9">
+    <div class="profession">C++ / C developer</div>
+    <div class="description"><p>Migration of C code base for embedded devices to a new compiler toolchain</p>
+<p>Extension of C++ based desktop applications</p>
+<p><code>C++, C, CAN-BUS, Borland, 80c32</code></p>
+<p><em>Internship</em></p>
+</div>
+  </div>
+</div>
+        
+      </div>
+    </div>
+    
+    <div class="col-xs-12 col-sm-5">
+      <div class="hidden-print">
+        <!-- SKILLS -->
+        <div class="box">
+          <h2>Programming Languages</h2>
+          <div class="skills">
+            
+              <!-- regular layout -->
+<div class="item-skills hidden-print" data-percent="0.85">C++</div>
+<div class="item-skills-fixed visible-print-block" style="width:85.0%">C++</div>
+            
+              <!-- regular layout -->
+<div class="item-skills hidden-print" data-percent="0.8">Python</div>
+<div class="item-skills-fixed visible-print-block" style="width:80.0%">Python</div>
+            
+              <!-- regular layout -->
+<div class="item-skills hidden-print" data-percent="0.7">SQL</div>
+<div class="item-skills-fixed visible-print-block" style="width:70.0%">SQL</div>
+            
+              <!-- regular layout -->
+<div class="item-skills hidden-print" data-percent="0.65">x86 Assembly</div>
+<div class="item-skills-fixed visible-print-block" style="width:65.0%">x86 Assembly</div>
+            
+              <!-- regular layout -->
+<div class="item-skills hidden-print" data-percent="0.75">C#</div>
+<div class="item-skills-fixed visible-print-block" style="width:75.0%">C#</div>
+            
+              <!-- regular layout -->
+<div class="item-skills hidden-print" data-percent="0.7">Java</div>
+<div class="item-skills-fixed visible-print-block" style="width:70.0%">Java</div>
+            
+              <!-- regular layout -->
+<div class="item-skills hidden-print" data-percent="0.5">Delphi</div>
+<div class="item-skills-fixed visible-print-block" style="width:50.0%">Delphi</div>
+            
+            
+              <div class="skills-legend clearfix">
+                <div class="legend-left legend">Beginner</div>
+                <div class="legend-left legend"><span>Proficient</span></div>
+                <div class="legend-right legend"><span>Expert</span></div>
+                <div class="legend-right legend">Master</div>
+              </div>
+            
+          </div>
+        </div>
+        <!-- SKILLS -->
+        <div class="box">
+          <h2>Technologies</h2>
+          <div class="skills">
+            
+              <!-- regular layout -->
+<div class="item-skills hidden-print" data-percent="0.8">COM</div>
+<div class="item-skills-fixed visible-print-block" style="width:80.0%">COM</div>
+            
+              <!-- regular layout -->
+<div class="item-skills hidden-print" data-percent="0.75">JEE</div>
+<div class="item-skills-fixed visible-print-block" style="width:75.0%">JEE</div>
+            
+              <!-- regular layout -->
+<div class="item-skills hidden-print" data-percent="0.7">Qt</div>
+<div class="item-skills-fixed visible-print-block" style="width:70.0%">Qt</div>
+            
+              <!-- regular layout -->
+<div class="item-skills hidden-print" data-percent="0.6">Boost</div>
+<div class="item-skills-fixed visible-print-block" style="width:60.0%">Boost</div>
+            
+              <!-- regular layout -->
+<div class="item-skills hidden-print" data-percent="0.65">Web</div>
+<div class="item-skills-fixed visible-print-block" style="width:65.0%">Web</div>
+            
+              <!-- regular layout -->
+<div class="item-skills hidden-print" data-percent="0.7">RDBMS</div>
+<div class="item-skills-fixed visible-print-block" style="width:70.0%">RDBMS</div>
+            
+              <!-- regular layout -->
+<div class="item-skills hidden-print" data-percent="0.75">Binary code analysis</div>
+<div class="item-skills-fixed visible-print-block" style="width:75.0%">Binary code analysis</div>
+            
+            
+              <div class="skills-legend clearfix">
+                <div class="legend-left legend">Beginner</div>
+                <div class="legend-left legend"><span>Proficient</span></div>
+                <div class="legend-right legend"><span>Expert</span></div>
+                <div class="legend-right legend">Master</div>
+              </div>
+            
+          </div>
+        </div>
+        <!-- SKILLS -->
+        <div class="box">
+          <h2>Platforms</h2>
+          <div class="skills">
+            
+              <!-- regular layout -->
+<div class="item-skills hidden-print" data-percent="0.8">Windows</div>
+<div class="item-skills-fixed visible-print-block" style="width:80.0%">Windows</div>
+            
+              <!-- regular layout -->
+<div class="item-skills hidden-print" data-percent="0.7">Linux</div>
+<div class="item-skills-fixed visible-print-block" style="width:70.0%">Linux</div>
+            
+            
+              <div class="skills-legend clearfix">
+                <div class="legend-left legend">Beginner</div>
+                <div class="legend-left legend"><span>Proficient</span></div>
+                <div class="legend-right legend"><span>Expert</span></div>
+                <div class="legend-right legend">Master</div>
+              </div>
+            
+          </div>
+        </div>
+        <div class="box">
+          <h2>Languages</h2>
+          <div class="language-skills">
+            <div class="skill">English <div class="icons pull-right"><div style="width: 80%;" class="icons-red"></div></div></div>
+            <div class="skill">German <div class="icons pull-right"><div style="width: 100%;" class="icons-red"></div></div></div>
+          </div>
+        </div>
+      </div>
 
+    <div class="visible-print-block" style="height:0px"></div>      
 
+      <div class="print visible-print-block">
+        <div class="col-xs-6">
+          <div class="box">
+            <h2>Programming Languages</h2>
+            <div class="skills">
+              
+                <!-- regular layout -->
+<div class="item-skills hidden-print" data-percent="0.85">C++</div>
+<div class="item-skills-fixed visible-print-block" style="width:85.0%">C++</div>
+              
+                <!-- regular layout -->
+<div class="item-skills hidden-print" data-percent="0.8">Python</div>
+<div class="item-skills-fixed visible-print-block" style="width:80.0%">Python</div>
+              
+                <!-- regular layout -->
+<div class="item-skills hidden-print" data-percent="0.7">SQL</div>
+<div class="item-skills-fixed visible-print-block" style="width:70.0%">SQL</div>
+              
+                <!-- regular layout -->
+<div class="item-skills hidden-print" data-percent="0.65">x86 Assembly</div>
+<div class="item-skills-fixed visible-print-block" style="width:65.0%">x86 Assembly</div>
+              
+                <!-- regular layout -->
+<div class="item-skills hidden-print" data-percent="0.75">C#</div>
+<div class="item-skills-fixed visible-print-block" style="width:75.0%">C#</div>
+              
+                <!-- regular layout -->
+<div class="item-skills hidden-print" data-percent="0.7">Java</div>
+<div class="item-skills-fixed visible-print-block" style="width:70.0%">Java</div>
+              
+                <!-- regular layout -->
+<div class="item-skills hidden-print" data-percent="0.5">Delphi</div>
+<div class="item-skills-fixed visible-print-block" style="width:50.0%">Delphi</div>
+              
+              
+                <div class="skills-legend clearfix">
+                  <div class="legend-left legend">Novice</div>
+                  <div class="legend-left legend"><span>Proficient</span></div>
+                  <div class="legend-right legend"><span>Expert</span></div>
+                  <div class="legend-right legend">Master</div>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-6">
+          <div class="box">
+            <h2>Technologies</h2>
+            <div class="skills">
+              
+                <!-- regular layout -->
+<div class="item-skills hidden-print" data-percent="0.8">COM</div>
+<div class="item-skills-fixed visible-print-block" style="width:80.0%">COM</div>
+              
+                <!-- regular layout -->
+<div class="item-skills hidden-print" data-percent="0.75">JEE</div>
+<div class="item-skills-fixed visible-print-block" style="width:75.0%">JEE</div>
+              
+                <!-- regular layout -->
+<div class="item-skills hidden-print" data-percent="0.7">Qt</div>
+<div class="item-skills-fixed visible-print-block" style="width:70.0%">Qt</div>
+              
+                <!-- regular layout -->
+<div class="item-skills hidden-print" data-percent="0.6">Boost</div>
+<div class="item-skills-fixed visible-print-block" style="width:60.0%">Boost</div>
+              
+                <!-- regular layout -->
+<div class="item-skills hidden-print" data-percent="0.65">Web</div>
+<div class="item-skills-fixed visible-print-block" style="width:65.0%">Web</div>
+              
+                <!-- regular layout -->
+<div class="item-skills hidden-print" data-percent="0.7">RDBMS</div>
+<div class="item-skills-fixed visible-print-block" style="width:70.0%">RDBMS</div>
+              
+                <!-- regular layout -->
+<div class="item-skills hidden-print" data-percent="0.75">Binary code analysis</div>
+<div class="item-skills-fixed visible-print-block" style="width:75.0%">Binary code analysis</div>
+              
+              
+                <div class="skills-legend clearfix">
+                  <div class="legend-left legend">Novice</div>
+                  <div class="legend-left legend"><span>Proficient</span></div>
+                  <div class="legend-right legend"><span>Expert</span></div>
+                  <div class="legend-right legend">Master</div>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="clear:both"></div>
+
+      <div class="visible-print-block" style="height:10px"></div>      
+
+      <div class="print visible-print-block">        
+        <div class="col-xs-6">
+          <!-- SKILLS -->
+          <div class="box">
+            <h2>Platforms</h2>
+            <div class="skills">
+              
+                <!-- regular layout -->
+<div class="item-skills hidden-print" data-percent="0.8">Windows</div>
+<div class="item-skills-fixed visible-print-block" style="width:80.0%">Windows</div>
+              
+                <!-- regular layout -->
+<div class="item-skills hidden-print" data-percent="0.7">Linux</div>
+<div class="item-skills-fixed visible-print-block" style="width:70.0%">Linux</div>
+              
+              
+                <div class="skills-legend clearfix">
+                  <div class="legend-left legend">Novice</div>
+                  <div class="legend-left legend"><span>Proficient</span></div>
+                  <div class="legend-right legend"><span>Expert</span></div>
+                  <div class="legend-right legend">Master</div>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-6">
+          <!-- LANGUAGES -->
+          <div class="box">
+            <h2>Languages</h2>
+            <div class="language-skills">
+              <div class="skill">English <div class="icons pull-right"><div style="width: 80%;" class="icons-red"></div></div></div>
+              <div class="skill">German <div class="icons pull-right"><div style="width: 100%;" class="icons-red"></div></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="clear:both"></div>
+      <!-- HOBBIES -->
+      <div class="box">
+        <h2>Hobbies</h2>
+        <div class="hobby">Rock climbing</div>
+        <div class="hobby">Guitar</div>
+        <div class="hobby">Programming</div>
+        <div class="hobby">Strategy games</div>
+        <div class="hobby">Research</div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="tld" style="display:none">ynoel.de</div>
+  
+  
 
       </div>
       
       <!-- JQUERY -->
-      <script src="/js/jquery.min.js"></script>
+      <script src="./js/jquery.min.js"></script>
       <!-- BOOTSTRAP -->
-      <script src="/js/bootstrap.min.js"></script>
+      <script src="./js/bootstrap.min.js"></script>
       
       <!-- SCRIPTS -->
-      <script src="/js/scripts.js"></script>
-      <script src="/js/moment.min.js"></script>
+      <script src="./js/scripts.js"></script>
+      <script src="./js/moment.min.js"></script>
 
       <div id="birthday" style="display:none"> 11/12/1989 </div>
     </body>
